@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo">
+            <img src="8aa3aa05-988a-418e-aadc-c7f4ae73d73d-removebg-preview.png" alt="Logo do Gato Café" class="logo-img">
+            <h1>Coffe&Cats</h1>
+        </div>
+        <div class="cadastro">
+            <button class="cadastro-btn">Cadastrar <a href="cadastro.html"></a></button>
+        </div>
+    </header>
+
+    <!-- Navegação -->
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">Menu</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Cafés</a></li>
+                    <li><a href="#">Bolos</a></li>
+                    <li><a href="#">Doces</a></li>
+                    <li><a href="#">Chás</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+        <body>
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="carrinho.php" method="POST">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" name="email" auto_increment="false" required>
+        
+                    <label for="password">Senha:</label>
+                    <input type="password" id="senha" name="senha" auto_increment="false" required>
+        
+                    <button type="submit" name="submit">Entrar</button>
+                </form>
+            </div>
+        </body>

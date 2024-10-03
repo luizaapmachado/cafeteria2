@@ -1,0 +1,302 @@
+/* Definindo cores tema de café */
+:root {
+    --cor-marrom-claro: #d7bd9a;
+    --cor-marrom-escuro: #874516;
+    --cor-creme: #f5f5dc;
+    --cor-branco: #fff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--cor-marrom-escuro);
+    background-color: var(--cor-creme);
+    overflow-x: hidden; /* Evitar rolagem horizontal */
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo da logo e nome da loja lado a lado */
+.logo {
+    display: flex;
+    align-items: center; /* Alinha a logo e o texto verticalmente */
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Estilo do botão de cadastro */
+.cadastro {
+    margin-left: auto; /* Move o botão para a extremidade direita */
+}
+
+.cadastro-btn {
+    background-color: var(--cor-marrom-claro);
+    color: var(--cor-marrom-escuro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-btn:hover {
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+}
+/* Estilo atualizado do botão de cadastro */
+.cadastro-btn {
+    background-color: transparent;
+    color: var(--cor-marrom-claro);
+    border: 2px solid var(--cor-marrom-claro);
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cadastro-btn:hover {
+    background-color: var(--cor-marrom-claro);
+    color: var(--cor-marrom-escuro);
+    border-color: var(--cor-marrom-escuro);
+}
+
+/* Navegação */
+.nav-bar {
+    background-color: var(--cor-marrom-claro);
+    padding: 10px 0; /* Espaço superior e inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Compensa a altura do header fixo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.nav-links li {
+    position: relative; /* Necessário para o dropdown */
+    margin: 0 20px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-marrom-escuro);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    top: 5px;
+}
+
+/* Efeito de hover nos links */
+.nav-links a:hover {
+    color: var(--cor-marrom-escuro);
+}
+
+/* Estilo do dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-marrom-escuro);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Links dentro do dropdown */
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--cor-marrom-claro);
+}
+
+/* Mostrar o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+  .image-container {
+    margin: 0 1rem;
+    text-align: center;
+  }
+  
+  .image-container img {
+    width: 250px; 
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1); 
+  }
+  
+  .image-container p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+
+/* Banner principal em tela cheia com carrossel */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    overflow: hidden;
+    background-color: var(--cor-marrom-claro);
+    margin-top: 80px; /* Compensa a altura do header fixo */
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    height: 100%;
+    width: 300%; /* 100% para cada slide */
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assegura que a imagem preencha a tela sem distorção */
+    transition: transform 0.5s ease;
+}
+
+/* Controles do carrossel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(0, 0, 0, 0.5); /* Botões translúcidos */
+    color: var(--cor-branco);
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Seção de produtos */
+.produtos {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-branco);
+    border: 2px solid var(--cor-marrom-escuro);
+    border-radius: 10px;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .heart {
+    color: red;
+}

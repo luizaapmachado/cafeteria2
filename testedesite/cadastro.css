@@ -1,0 +1,299 @@
+:root {
+    --cor-marrom-claro: #d7bd9a;
+    --cor-marrom-escuro: #874516;
+    --cor-creme: #f5f5dc;
+    --cor-branco: #fff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--cor-marrom-escuro);
+    background-color: var(--cor-creme);
+    overflow-x: hidden; /* Evitar rolagem horizontal */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo da logo e nome da loja lado a lado */
+.logo {
+    display: flex;
+    align-items: center; /* Alinha a logo e o texto verticalmente */
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Estilo do botão de cadastro */
+.cadastro {
+    margin-left: auto; /* Move o botão para a extremidade direita */
+}
+
+.cadastro-btn {
+    background-color: var(--cor-marrom-claro);
+    color: var(--cor-marrom-escuro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-btn:hover {
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+}
+/* Estilo atualizado do botão de cadastro */
+.cadastro-btn {
+    background-color: transparent;
+    color: var(--cor-marrom-claro);
+    border: 2px solid var(--cor-marrom-claro);
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cadastro-btn:hover {
+    background-color: var(--cor-marrom-claro);
+    color: var(--cor-marrom-escuro);
+    border-color: var(--cor-marrom-escuro);
+}
+
+/* Navegação */
+.nav-bar {
+    background-color: var(--cor-marrom-claro);
+    padding: 10px 0; /* Espaço superior e inferior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Compensa a altura do header fixo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.nav-links li {
+    position: relative; /* Necessário para o dropdown */
+    margin: 0 20px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-marrom-escuro);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    top: 5px;
+}
+
+/* Efeito de hover nos links */
+.nav-links a:hover {
+    color: var(--cor-marrom-escuro);
+}
+
+/* Estilo do dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-marrom-escuro);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Links dentro do dropdown */
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--cor-marrom-claro);
+}
+
+/* Mostrar o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Definindo cores tema */
+:root {
+    --cor-marrom-claro: #d2b48c;
+    --cor-marrom-escuro: #8b4513;
+    --cor-creme: #f5f5dc;
+    --cor-branco: #fff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Container Principal */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas lado a lado */
+    gap: 20px; /* Espaçamento entre as colunas */
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: flex-start; /* Garante que os títulos fiquem no topo */
+    position: relative;
+    right: -150px;
+}
+
+/* Seção de formulário */
+.form-section {
+    padding: 20px;
+    border: 2px solid var(--cor-marrom-claro);
+    border-radius: 10px;
+    background-color: var(--cor-branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Garante que o conteúdo da seção esteja alinhado ao topo */
+}
+
+/* Títulos das seções */
+h2 {
+    color: var(--cor-marrom-escuro);
+    margin-bottom: 20px;
+}
+
+/* Estilo das caixas de input */
+.input-box {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Coluna para label, coluna para input */
+    gap: 10px 15px; /* Espaçamento entre os campos */
+    align-items: center;
+}
+
+/* Estilos das labels e inputs */
+label {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 16px;
+    color: var(--cor-marrom-escuro);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-marrom-claro);
+    border-radius: 5px;
+    background-color: var(--cor-creme);
+    font-size: 16px;
+    color: var(--cor-marrom-escuro);
+}
+
+input:focus {
+    border-color: var(--cor-marrom-escuro);
+    outline: none;
+}
+
+/* Botão de Cadastro */
+.submit-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: var(--cor-marrom-claro);
+    color: var(--cor-branco);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: var(--cor-marrom-escuro);
+}
+
+/* Seção de Login */
+.login-section {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--cor-marrom-escuro);
+}
+
+.login-section a {
+    color: var(--cor-marrom-escuro);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid var(--cor-marrom-escuro);
+    transition: color 0.3s ease;
+}
+
+.login-section a:hover {
+    color: var(--cor-marrom-claro);
+    border-bottom: 1px solid var(--cor-marrom-claro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr; /* Coloca as seções uma embaixo da outra */
+    }
+
+    label {
+        text-align: left; /* Labels alinhadas à esquerda em dispositivos menores */
+    }
+}
